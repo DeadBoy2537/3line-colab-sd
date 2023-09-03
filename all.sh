@@ -272,7 +272,7 @@ function run {
 
 BASEPATH=/content/drive/MyDrive/SD
 TEMPLATE_LOCATION="https://github.com/Mira-LeafTown/3line-colab-sd"
-TEMPLATE_NAME="camenduru"
+TEMPLATE_NAME="minimal"
 while [[ $# -gt 0 ]]
 do
     key="$1"
@@ -307,7 +307,7 @@ do
         echo "Options:"
         echo "-f, --force-install          Force reinstall"
         echo "-l, --template-location      Location of the template repo or local directory (default: https://github.com/Mira-LeafTown/3line-colab-sd)"
-        echo "-n, --template-name          Name of the template to install (default: templates/camenduru)"
+        echo "-n, --template-name          Name of the template to install (default: templates/minimal)"
         echo "-i, --install-path           Path to install SD (default: /content/drive/MyDrive/SD)"
         exit 1
         ;;
