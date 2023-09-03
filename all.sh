@@ -108,7 +108,7 @@ function sed_for {
 }
 
 function prepare_perf_tools {
-    local packages=("http://launchpadlibrarian.net/367274644/libgoogle-perftools-dev_2.5-2.2ubuntu3_amd64.deb" "https://launchpad.net/ubuntu/+source/google-perftools/2.5-2.2ubuntu3/+build/14795286/+files/google-perftools_2.5-2.2ubuntu3_all.deb" "https://launchpad.net/ubuntu/+source/google-perftools/2.5-2.2ubuntu3/+build/14795286/+files/libtcmalloc-minimal4_2.5-2.2ubuntu3_amd64.deb" "https://launchpad.net/ubuntu/+source/google-perftools/2.5-2.2ubuntu3/+build/14795286/+files/libgoogle-perftools4_2.5-2.2ubuntu3_amd64.deb")
+    local packages=("http://launchpadlibrarian.net/367274644/libgoogle-perftools-dev_2.5-2.2ubuntu3_amd64.deb" "https://launchpad.net/ubuntu/+source/google-perftools/2.5-2.2ubuntu3/+build/14795286/+files/google-perftools_2.5-2.2ubuntu3_all.deb" "https://launchpad.net/ubuntu/+source/google-perftools/2.5-2.2ubuntu3/+build/14795286/+files/libtcmalloc-camenduru4_2.5-2.2ubuntu3_amd64.deb" "https://launchpad.net/ubuntu/+source/google-perftools/2.5-2.2ubuntu3/+build/14795286/+files/libgoogle-perftools4_2.5-2.2ubuntu3_amd64.deb")
     regex="/([^/]+)\.deb$"
     install=false
     for package in "${packages[@]}"; do
@@ -272,7 +272,7 @@ function run {
 
 BASEPATH=/content/drive/MyDrive/SD
 TEMPLATE_LOCATION="https://github.com/Mira-LeafTown/3line-colab-sd"
-TEMPLATE_NAME="minimal"
+TEMPLATE_NAME="camenduru"
 while [[ $# -gt 0 ]]
 do
     key="$1"
@@ -307,7 +307,7 @@ do
         echo "Options:"
         echo "-f, --force-install          Force reinstall"
         echo "-l, --template-location      Location of the template repo or local directory (default: https://github.com/Mira-LeafTown/3line-colab-sd)"
-        echo "-n, --template-name          Name of the template to install (default: templates/minimal)"
+        echo "-n, --template-name          Name of the template to install (default: templates/camenduru)"
         echo "-i, --install-path           Path to install SD (default: /content/drive/MyDrive/SD)"
         exit 1
         ;;
